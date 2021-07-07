@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.FaurPlus">
-        <activity android:name=".Anna"></activity>
+        <activity android:name=".MaxDle"></activity>
+        <activity android:name=".Anna" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
