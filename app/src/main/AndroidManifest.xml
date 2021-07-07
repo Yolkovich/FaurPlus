@@ -5,10 +5,18 @@
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
+        android:label=""
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.FaurPlus">
+        <activity android:name=".Ppm"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".MaxDle"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".Anna"
+            android:parentActivityName=".MainActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
