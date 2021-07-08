@@ -30,10 +30,15 @@
         android:hint="Volvo 426 ok"
         app:endIconMode="clear_text"
         android:layout_marginTop="95dp"
-        app:endIconTint="@color/ColorPrimaryDark"
+        app:startIconTint="@color/GoodNews"
+        app:endIconTint="@color/Mistake"
         app:startIconDrawable="@drawable/ic_ok"
         android:layout_marginEnd="20dp"
-        android:layout_marginRight="20dp">
+        android:layout_marginRight="20dp"
+
+
+        app:hintTextColor="@color/GoodNews"
+        app:boxStrokeColor="@color/GoodNews">
 
 
 
@@ -44,17 +49,15 @@
             android:inputType="number"
             android:fontFamily="@font/secularone_regular"
             android:layout_width="match_parent"
-
             android:textSize="18sp"
-            android:layout_height="wrap_content"
-            android:textColorHint="@color/ColorPrimaryDark"/>
+            android:layout_height="wrap_content"/>
 
     </com.google.android.material.textfield.TextInputLayout>
 
 
         <com.google.android.material.textfield.TextInputLayout
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
-
+            app:startIconTint="@color/Mistake"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="phone"
@@ -62,7 +65,11 @@
             app:endIconMode="clear_text"
             android:layout_marginEnd="20dp"
             android:layout_marginRight="20dp"
-            app:startIconDrawable="@drawable/ic_nok">
+            app:startIconDrawable="@drawable/ic_nok"
+            app:endIconTint="@color/Mistake"
+
+            app:hintTextColor="@color/Mistake"
+            app:boxStrokeColor="@color/Mistake">
 
 
 
@@ -76,11 +83,23 @@
                 android:textSize="18sp"
                 android:fontFamily="@font/secularone_regular"
                 android:layout_height="wrap_content"
-                android:textColorHint="@color/ColorPrimaryDark"
+
+                app:endIconTint="@color/Mistake"
                 />
 
         </com.google.android.material.textfield.TextInputLayout>
 
+
+        <TextView
+            android:layout_marginTop="40dp"
+            android:layout_width="250dp"
+            android:layout_gravity="center"
+            android:layout_marginEnd="13dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginStart="0dp"
+            android:layout_marginLeft="0dp"
+            android:layout_height="1dp"
+            android:background="@color/Gray"/>
 
         <com.google.android.material.textfield.TextInputLayout
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
@@ -94,8 +113,11 @@
             android:layout_marginEnd="20dp"
             android:layout_marginRight="20dp"
             android:layout_marginTop="40dp"
-            app:endIconTint="@color/ColorPrimaryDark"
-            app:startIconDrawable="@drawable/ic_ok">
+            app:startIconTint="@color/GoodNews"
+            app:endIconTint="@color/Mistake"
+            app:startIconDrawable="@drawable/ic_ok"
+            app:hintTextColor="@color/GoodNews"
+            app:boxStrokeColor="@color/GoodNews">
 
 
 
@@ -124,8 +146,11 @@
             app:endIconMode="clear_text"
             android:layout_marginEnd="20dp"
             android:layout_marginRight="20dp"
-            app:endIconTint="@color/ColorPrimaryDark"
-            app:startIconDrawable="@drawable/ic_nok">
+            app:startIconTint="@color/Mistake"
+            app:endIconTint="@color/Mistake"
+            app:startIconDrawable="@drawable/ic_nok"
+            app:hintTextColor="@color/Mistake"
+            app:boxStrokeColor="@color/Mistake">
 
 
 
@@ -143,6 +168,18 @@
 
         </com.google.android.material.textfield.TextInputLayout>
 
+        <TextView
+            android:layout_marginTop="40dp"
+            android:layout_width="250dp"
+            android:layout_gravity="center"
+            android:layout_marginEnd="13dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginStart="0dp"
+            android:layout_marginLeft="0dp"
+            android:layout_height="1dp"
+            android:background="@color/Gray"/>
+
+
 
         <com.google.android.material.textfield.TextInputLayout
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
@@ -156,8 +193,11 @@
             android:layout_marginEnd="20dp"
             android:layout_marginRight="20dp"
             android:layout_marginTop="40dp"
-            app:endIconTint="@color/ColorPrimaryDark"
-            app:startIconDrawable="@drawable/ic_oclock">
+            app:startIconTint="@color/TimeColor"
+            app:endIconTint="@color/Mistake"
+            app:startIconDrawable="@drawable/ic_oclock"
+            app:hintTextColor="@color/TimeColor"
+            app:boxStrokeColor="@color/TimeColor">
 
 
 
@@ -212,7 +252,8 @@
             <FrameLayout
                 android:background="@color/ColorPrimary"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                >
 
                 <RelativeLayout
                     android:id="@+id/button_anna"
@@ -220,7 +261,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:clickable="true"
-                    android:focusable="true">
+                    android:focusable="true"
+                    >
 
                     <TextView
                         android:textSize="18sp"
@@ -233,10 +275,6 @@
                         android:gravity="center_horizontal" />
                 </RelativeLayout>
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="horizontal"></LinearLayout>
 
             </FrameLayout>
 
@@ -246,6 +284,10 @@
 
 
 
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"></LinearLayout>
 
         <LinearLayout
             android:layout_width="wrap_content"
