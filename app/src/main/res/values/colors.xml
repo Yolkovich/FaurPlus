@@ -7,4 +7,10 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="ColorWhite">#FFFFFFFF</color>
+    <color name="LightBlue">#A3BDED</color>
+    <color name="ColorButton">#32A951</color>
+    <color name="Mistake">#FF565E</color>
+    <color name="GoodNews">#00cc77</color>
+    <color name="TimeColor">#FFB61D</color>
+    <color name="Gray">#D8D8D8</color>
 </resources>

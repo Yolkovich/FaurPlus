@@ -5,6 +5,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.ImageButton;
 
 public class MainActivity extends AppCompatActivity {
@@ -25,24 +27,36 @@ public class MainActivity extends AppCompatActivity {
         firstScreen.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, Anna.class);
+                Intent intent = new Intent(MainActivity.this, Ppm.class);
                 startActivity(intent);
+
+                // Animation onClick
+                Animation animFadein = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.fade_in);
+                firstScreen.startAnimation(animFadein);
             }
         });
 
         secondScreen.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, MaxDle.class);
+                Intent intent = new Intent(MainActivity.this, Anna.class);
                 startActivity(intent);
+
+                // Animation onClick
+                Animation animFadein = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.fade_in);
+                secondScreen.startAnimation(animFadein);
             }
         });
 
         thirdScreen.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, Ppm.class);
+                Intent intent = new Intent(MainActivity.this, MaxDle.class);
                 startActivity(intent);
+
+                // Animation onClick
+                Animation animFadein = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.fade_in);
+                thirdScreen.startAnimation(animFadein);
             }
         });
     }
