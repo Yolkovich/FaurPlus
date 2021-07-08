@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
         firstScreen.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, Anna.class);
+                Intent intent = new Intent(MainActivity.this, Ppm.class);
                 startActivity(intent);
             }
         });
@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
         secondScreen.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, MaxDle.class);
+                Intent intent = new Intent(MainActivity.this, Anna.class);
                 startActivity(intent);
             }
         });
@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
         thirdScreen.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, Ppm.class);
+                Intent intent = new Intent(MainActivity.this, MaxDle.class);
                 startActivity(intent);
             }
         });
