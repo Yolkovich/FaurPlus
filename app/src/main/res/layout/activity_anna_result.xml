@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AnnaResult">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/result_anna_img"
+            android:layout_width="match_parent"
+            android:layout_height="272dp"
+            android:layout_marginTop="50dp"
+            android:paddingBottom="23dp"
+            android:layout_marginRight="7dp"
+            app:srcCompat="@drawable/result_anna_img" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_weight="1"
+                android:layout_margin="15dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:layout_height="110dp"
+
+                    android:elevation="2dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/shadow">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="wrap_content"
+                        android:fontFamily="@font/secularone_regular"
+                        android:layout_height="wrap_content"
+                        android:textSize="20dp"
+                        android:layout_marginLeft="10dp"
+                        android:paddingTop="10dp"
+                        android:text="PPM 426:"/>
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/ppm2"
+                        android:layout_width="wrap_content"
+                        android:fontFamily="@font/secularone_regular"
+                        android:layout_height="wrap_content"
+                        android:textSize="50sp"
+                        android:layout_gravity="center"
+                        android:text="3294,8"/>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_weight="1"
+                android:layout_margin="15dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:layout_height="110dp"
+
+                    android:background="@drawable/drawable_back"
+                    android:layout_weight="1">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="wrap_content"
+                        android:fontFamily="@font/secularone_regular"
+                        android:layout_height="wrap_content"
+                        android:textSize="20dp"
+                        android:layout_marginLeft="10dp"
+                        android:paddingTop="10dp"
+                        android:text="PPM 43X:"/>
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/ppm1"
+                        android:layout_width="wrap_content"
+                        android:fontFamily="@font/secularone_regular"
+                        android:layout_height="wrap_content"
+                        android:textSize="50sp"
+                        android:layout_gravity="center"
+                        android:text="6912,4"/>
+
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:orientation="vertical">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/dle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+
+
+
+
+
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

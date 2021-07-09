@@ -35,5 +35,7 @@
         <item name="android:alpha">1.0</item>
     </style>
 
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.MaterialComponents.Light" />
+
 
 </resources>
