@@ -11,4 +11,12 @@
         android:layout_height="280dp"
         android:src="@drawable/gif_dlemax"/>
 
+<!--    -->
+<!--    <TextView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:textColor="@drawable/gif_dlemax"-->
+<!--        android:textSize="50dp"/>-->
+
+
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
