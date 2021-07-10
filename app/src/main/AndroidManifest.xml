@@ -9,7 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.FaurPlus">
-        <activity android:name=".AnnaResult"
+        <activity android:name=".Settings"></activity>
+        <activity android:name=".Grafics" />
+        <activity
+            android:name=".AnnaResult"
             android:parentActivityName=".Anna" />
         <activity
             android:name=".Ppm"

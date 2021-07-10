@@ -6,6 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
+
         <androidx.core.widget.NestedScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent">
@@ -16,10 +17,7 @@
                     android:orientation="vertical">
 
 
-                        <LinearLayout
-                                    android:layout_width="match_parent"
-                                    android:layout_height="21dp"
-                                    android:orientation="vertical" />
+
 
 
 
@@ -27,11 +25,11 @@
                             android:id="@+id/imageViewFirstScreen"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:layout_marginTop="15dp"
                             android:background="@null"
                             app:srcCompat="@drawable/first_formul_view"
 
-                            style="?android:borderlessButtonStyle"
-                            />
+                            style="?android:borderlessButtonStyle" />
 
 
                         <ImageButton
@@ -65,6 +63,9 @@
 
 
         </androidx.core.widget.NestedScrollView>
+
+
+
         <com.google.android.material.bottomappbar.BottomAppBar
             android:id="@+id/bottomAppBar"
             android:layout_width="match_parent"
@@ -73,20 +74,12 @@
             android:backgroundTint="@color/ColorPrimary"
             app:menu="@menu/app_bar_menu"
             app:hideOnScroll="true"
-            app:navigationIcon="@drawable/ic_menu"
             app:fabCradleMargin="10dp"
             app:fabCradleRoundedCornerRadius="20dp"/>
 
 
 
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:srcCompat="@drawable/ic_add"
-            app:backgroundTint="@color/ColorAccent"
-            app:layout_anchor="@id/bottomAppBar"
-            app:maxImageSize="40dp"
-            app:tint="@color/ColorWhite"/>
+
 
 
 

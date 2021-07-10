@@ -1,16 +1,23 @@
 package com.example.faurplus;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.coordinatorlayout.widget.CoordinatorLayout;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.BaseTransientBottomBar;
 import com.google.android.material.snackbar.Snackbar;
 
@@ -19,21 +26,34 @@ import java.util.ArrayList;
 public class Anna extends AppCompatActivity  {
 
     private EditText v426_ok, v426_nok, v43x_ok, v43x_nok, quantit_hours;
-
+    CoordinatorLayout constraintLayout;
     RelativeLayout button_1;
-    private View coordinatorLayout;
+    private CoordinatorLayout coordinatorLayout;
+
+
+
+    public void toNull(){
+        v426_ok.setText("");
+        v426_nok.setText("");
+        v43x_ok.setText("");
+        v43x_nok.setText("");
+        quantit_hours.setText("");
+    }
+
 
     public void foo(){
-        Snackbar snackbar = Snackbar.make(coordinatorLayout,
-                "Pardon! Ale pola nie mogą być puste!",
-                Snackbar.LENGTH_LONG);
+        Snackbar snackbar = Snackbar.make(coordinatorLayout, "", Snackbar.LENGTH_LONG);
+        View custom = getLayoutInflater().inflate(R.layout.snack_bur_custom, null);
+        snackbar.getView().setBackgroundColor(Color.TRANSPARENT);
+        Snackbar.SnackbarLayout snackbarLayout = (Snackbar.SnackbarLayout) snackbar.getView();
+        snackbarLayout.setPadding(0, 0, 0, 0);
+
+        snackbarLayout.addView(custom, 0);
         snackbar.show();
+
     }
 
-    public int toInteger(String s){
-        int integer = Integer.parseInt(s);
-        return integer;
-    }
+
     public void check(){
 
         if (v426_ok.getText().length() == 0) {
@@ -58,26 +78,63 @@ public class Anna extends AppCompatActivity  {
     }
 
 
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.app_bar_menu, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected (MenuItem item) {
+
+
+        int id = item.getItemId();
+
+        if( id == R.id.menuSettings){
+
+            Intent intentS = new Intent(this, Settings.class);
+            startActivity(intentS);
+            return true;
+
+        }else if(id == R.id.grafics){
+
+            Intent intentG = new Intent(this, Grafics.class);
+            startActivity(intentG);
+            return true;
+
+        }
+
+        return super.onOptionsItemSelected(item);
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_anna);
 
-        v426_ok = findViewById(R.id.volvo_426_ok);
+         v426_ok = findViewById(R.id.volvo_426_ok);
         v426_nok = findViewById(R.id.volvo_426_nok);
         v43x_ok = findViewById(R.id.volvo_43x_ok);
         v43x_nok = findViewById(R.id.volvo_43x_nok);
         quantit_hours = findViewById(R.id.quantity_hours);
-
         button_1 = findViewById(R.id.button_anna);
+        constraintLayout =  findViewById(R.id.materialToolbar);
 
+        FloatingActionButton fab = (FloatingActionButton)findViewById(R.id.button_delet_all);
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
 
+                toNull();
+
+            }
+        });
 
         // Container
         this.coordinatorLayout = this.findViewById(R.id.materialToolbar);
 
             button_1.setOnClickListener(view -> {
+
 
                     check();
 
@@ -121,13 +178,17 @@ public class Anna extends AppCompatActivity  {
                         // запуск SecondActivity
                         startActivity(intent);
 
-                    }else{ Snackbar snackbar = Snackbar.make(coordinatorLayout,
-                        "Pardon! Ale pola nie mogą być puste!",
-                        Snackbar.LENGTH_LONG);
-                snackbar.show();}
+                    }else {
+                       foo();
 
+
+
+                    }
 
             });
+
+
+
 
 
 

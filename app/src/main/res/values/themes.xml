@@ -16,6 +16,7 @@
         <item name="snackbarButtonStyle">@style/MaterialSnackbarTextButtonTheme</item>
         <item name="snackbarTextViewStyle">@style/MaterialSnackbarTextViewTheme</item>
     </style>
+
     <style name="MaterialSnackbarTheme" parent="@style/Widget.MaterialComponents.Snackbar">
         <!-- <item name="backgroundTint">#00cc77</item>-->
         <!-- <item name="android:background">@drawable/snackbar_background</item>-->
@@ -36,6 +37,15 @@
     </style>
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.MaterialComponents.Light" />
+
+    <style name="Theme.FaurPlus.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.FaurPlus.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.FaurPlus.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
 
 </resources>

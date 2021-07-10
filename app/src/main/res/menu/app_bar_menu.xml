@@ -2,15 +2,21 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <item android:id="@+id/menuAbout"
-        android:title="@string/about"
-        android:icon="@drawable/ic_info"
-        app:showAsAction="ifRoom"/>
+
 
     <item android:id="@+id/menuSettings"
-        android:icon="@drawable/ic_settings"
-        android:title="@string/settings"
-        app:showAsAction="ifRoom"/>
+        android:icon="@drawable/ic_setting"
+        android:title="Ustawienia"
+        app:showAsAction="ifRoom"
+        android:enabled="true"/>
+
+    <item
+        android:id="@+id/grafics"
+        android:title=""
+        android:icon="@drawable/ic_grafics"
+        app:showAsAction="ifRoom"
+        android:enabled="true"
+        />
 
 
 

@@ -1,9 +1,11 @@
 package com.example.faurplus;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
@@ -14,6 +16,22 @@ public class MainActivity extends AppCompatActivity {
     ImageButton firstScreen;
     ImageButton secondScreen;
     ImageButton thirdScreen;
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+
+        switch (item.getItemId()){
+            case R.id.menuSettings:
+                startActivity(new Intent(MainActivity.this, Settings.class));
+                break;
+            case R.id.grafics:
+                startActivity(new Intent(MainActivity.this, Grafics.class));
+                break;
+        }
+
+
+        return super.onOptionsItemSelected(item);
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,5 +77,7 @@ public class MainActivity extends AppCompatActivity {
                 thirdScreen.startAnimation(animFadein);
             }
         });
+
+
     }
 }
