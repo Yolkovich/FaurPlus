@@ -18,6 +18,15 @@
                     android:layout_height="match_parent"
                     android:orientation="vertical">
 
+
+                    <pl.droidsonroids.gif.GifImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="280dp"
+                        android:src="@drawable/gif_anna"/>
+
+
+
+
                     <com.google.android.material.textfield.TextInputLayout
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
 
@@ -27,7 +36,6 @@
                     android:inputType="number"
                     android:hint="Volvo 426 ok"
                     app:endIconMode="clear_text"
-                    android:layout_marginTop="95dp"
                     app:startIconTint="@color/GoodNews"
                     app:endIconTint="@color/Mistake"
                     app:startIconDrawable="@drawable/ic_ok"
