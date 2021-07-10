@@ -11,11 +11,14 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageButton;
 
+import com.airbnb.lottie.LottieAnimationView;
+
 public class MainActivity extends AppCompatActivity {
 
     ImageButton firstScreen;
     ImageButton secondScreen;
     ImageButton thirdScreen;
+    //LottieAnimationView splash;
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
@@ -38,9 +41,16 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        //splash = findViewById(R.id.lottie);
         ImageButton firstScreen = (ImageButton) findViewById(R.id.imageViewFirstScreen);
         ImageButton secondScreen = (ImageButton) findViewById(R.id.imageViewSecondScreen);
         ImageButton thirdScreen = (ImageButton) findViewById(R.id.imageViewThirdScreen);
+
+
+
+        //обработка сплэша
+        //splash.animate().translationX(-100).setDuration(100).setStartDelay(500);
+
 
         firstScreen.setOnClickListener(new View.OnClickListener() {
             @Override
