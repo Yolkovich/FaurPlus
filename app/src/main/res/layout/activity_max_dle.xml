@@ -6,17 +6,504 @@
     android:layout_height="match_parent"
     tools:context=".MaxDle">
 
-    <pl.droidsonroids.gif.GifImageView
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="280dp"
-        android:src="@drawable/gif_dlemax"/>
+        android:layout_height="match_parent">
 
-<!--    -->
-<!--    <TextView-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="match_parent"-->
-<!--        android:textColor="@drawable/gif_dlemax"-->
-<!--        android:textSize="50dp"/>-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+
+        <pl.droidsonroids.gif.GifImageView
+            android:layout_width="match_parent"
+            android:layout_height="280dp"
+            android:src="@drawable/gif_dlemax" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+
+                android:layout_width="match_parent"
+                android:layout_height="58dp"
+                android:layout_margin="15dp"
+                android:layout_marginBottom="12dp"
+                android:hint="Duration of paid hours per MOD"
+
+                android:inputType="number"
+                app:startIconDrawable="@drawable/ic_aa"
+                app:startIconTint="@color/ColorPrimary"
+                android:focusable="false"
+                android:longClickable="false"
+                android:visibility="visible"
+                app:endIconTint="@color/Mistake"
+                app:endIconMode="clear_text"
+                app:boxStrokeColor="@color/GoodNews">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/t1"
+                    android:layout_width="match_parent"
+                    android:cursorVisible="false"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/secularone_regular"
+                    android:inputType="number"
+                    android:maxLength="10"
+                    android:maxLines="1"
+                    android:textSize="18sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+
+                android:layout_width="match_parent"
+                android:layout_height="58dp"
+                android:layout_margin="15dp"
+                android:layout_marginBottom="12dp"
+                android:hint="Number of GL per shift"
+                android:inputType="number"
+                app:startIconDrawable="@drawable/ic_bb"
+                app:startIconTint="@color/ColorPrimary"
+                app:endIconTint="@color/Mistake"
+                app:endIconMode="clear_text"
+                app:boxStrokeColor="@color/GoodNews">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/e1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/secularone_regular"
+                    android:inputType="number"
+                    android:maxLength="10"
+                    android:maxLines="1"
+                    android:textSize="18sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+         <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:layout_marginBottom="12dp"
+                android:hint="Time Spent in production to produce part"
+                android:inputType="number"
+                app:boxStrokeColor="@color/GoodNews"
+                app:endIconMode="clear_text"
+                app:endIconTint="@color/Mistake"
+                app:hintTextColor="@color/GoodNews"
+                app:startIconDrawable="@drawable/ic_cc"
+                app:startIconTint="@color/ColorPrimary">
+
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/e2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/secularone_regular"
+                    android:inputType="number"
+                    android:maxLength="10"
+                    android:maxLines="1"
+                    android:textSize="18sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+         <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:layout_marginBottom="12dp"
+                android:hint="Non Productive MOD (Setters, Reworker etc..)"
+                android:inputType="number"
+                app:boxStrokeColor="@color/GoodNews"
+                app:endIconMode="clear_text"
+                app:endIconTint="@color/Mistake"
+                app:hintTextColor="@color/GoodNews"
+                app:startIconDrawable="@drawable/ic_dd"
+                app:startIconTint="@color/ColorPrimary">
+
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/e3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/secularone_regular"
+                    android:inputType="number"
+                    android:maxLength="10"
+                    android:maxLines="1"
+                    android:textSize="18sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+         <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:layout_marginBottom="12dp"
+                android:hint="Nb of Operators includd inside the WC"
+                android:inputType="number"
+                app:boxStrokeColor="@color/GoodNews"
+                app:endIconMode="clear_text"
+                app:endIconTint="@color/Mistake"
+                app:hintTextColor="@color/GoodNews"
+                app:startIconDrawable="@drawable/ic_ee"
+                app:startIconTint="@color/ColorPrimary">
+
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/e4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/secularone_regular"
+                    android:inputType="number"
+                    android:maxLength="10"
+                    android:maxLines="1"
+                    android:textSize="18sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+         <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:layout_marginBottom="12dp"
+                android:hint="Total nb of operators (included GL)"
+                android:inputType="number"
+                app:boxStrokeColor="@color/GoodNews"
+                app:endIconMode="clear_text"
+                app:endIconTint="@color/Mistake"
+                app:hintTextColor="@color/GoodNews"
+                app:startIconDrawable="@drawable/ic_ff"
+                app:startIconTint="@color/ColorPrimary">
+
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/e5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/secularone_regular"
+                    android:inputType="number"
+                    android:maxLength="10"
+                    android:maxLines="1"
+                    android:textSize="18sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+
+                android:layout_width="match_parent"
+                android:layout_height="58dp"
+                android:layout_margin="15dp"
+                android:layout_marginBottom="12dp"
+                android:hint="Paid breaks = 20"
+                android:inputType="number"
+                app:startIconDrawable="@drawable/ic_gg"
+                app:startIconTint="@color/ColorPrimary"
+                android:focusable="false"
+                android:longClickable="false"
+                android:visibility="visible"
+                app:endIconTint="@color/Mistake"
+                app:endIconMode="clear_text"
+                app:boxStrokeColor="@color/GoodNews">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/t2"
+                    android:layout_width="match_parent"
+                    android:cursorVisible="false"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/secularone_regular"
+                    android:inputType="number"
+                    android:maxLength="10"
+                    android:maxLines="1"
+                    android:textSize="18sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+
+                android:layout_width="match_parent"
+                android:layout_height="58dp"
+                android:layout_margin="15dp"
+                android:layout_marginBottom="12dp"
+                android:hint="Top 5"
+
+                android:inputType="number"
+                app:startIconDrawable="@drawable/ic_hh"
+                app:startIconTint="@color/ColorPrimary"
+                android:focusable="false"
+                android:longClickable="false"
+                android:visibility="visible"
+                app:endIconTint="@color/Mistake"
+                app:endIconMode="clear_text"
+                app:boxStrokeColor="@color/GoodNews">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/t3"
+                    android:layout_width="match_parent"
+                    android:cursorVisible="false"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/secularone_regular"
+                    android:inputType="number"
+                    android:maxLength="10"
+                    android:maxLines="1"
+                    android:textSize="18sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+         <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:layout_marginBottom="12dp"
+                android:hint="5S / TPM"
+                android:inputType="number"
+                app:boxStrokeColor="@color/GoodNews"
+                app:endIconMode="clear_text"
+                app:endIconTint="@color/Mistake"
+                app:hintTextColor="@color/GoodNews"
+                app:startIconDrawable="@drawable/ic_ii"
+                app:startIconTint="@color/ColorPrimary">
+
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/e6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/secularone_regular"
+                    android:inputType="number"
+                    android:maxLength="10"
+                    android:maxLines="1"
+                    android:textSize="18sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+         <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:layout_marginBottom="12dp"
+                android:hint="OK first part"
+                android:inputType="number"
+             app:endIconMode="clear_text"
+                app:boxStrokeColor="@color/GoodNews"
+                app:endIconTint="@color/Mistake"
+                app:hintTextColor="@color/GoodNews"
+                app:startIconDrawable="@drawable/ic_jj"
+                app:startIconTint="@color/ColorPrimary">
+
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/e7"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/secularone_regular"
+                    android:inputType="number"
+
+                    android:maxLength="10"
+                    android:maxLines="1"
+                    android:textSize="18sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+         <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:layout_marginBottom="12dp"
+                android:hint="Standart C/O time"
+                android:inputType="number"
+                app:boxStrokeColor="@color/GoodNews"
+                app:endIconMode="clear_text"
+                app:endIconTint="@color/Mistake"
+                app:hintTextColor="@color/GoodNews"
+                app:startIconDrawable="@drawable/ic_mm"
+
+                app:startIconTint="@color/ColorPrimary">
+
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/e8"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/secularone_regular"
+                    android:inputType="number"
+                    android:maxLength="10"
+                    android:maxLines="1"
+                    android:textSize="18sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:layout_marginBottom="12dp"
+                android:hint="Number of C/O by shift"
+                android:inputType="number"
+                app:boxStrokeColor="@color/GoodNews"
+                app:endIconMode="clear_text"
+                app:endIconTint="@color/Mistake"
+                app:hintTextColor="@color/GoodNews"
+                app:startIconDrawable="@drawable/ic_nn"
+                app:startIconTint="@color/ColorPrimary">
+
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/e9"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/secularone_regular"
+                    android:inputType="number"
+                    android:maxLength="10"
+                    android:maxLines="1"
+                    android:textSize="18sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:layout_marginBottom="12dp"
+                android:hint="DLE Actual"
+                android:inputType="number"
+                app:boxStrokeColor="@color/GoodNews"
+                app:endIconTint="@color/Mistake"
+                app:endIconMode="clear_text"
+                app:hintTextColor="@color/GoodNews"
+                app:startIconDrawable="@drawable/ic_pp"
+                app:startIconTint="@color/ColorPrimary">
+
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/actual"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/secularone_regular"
+                    android:inputType="number"
+                    android:maxLength="10"
+                    android:maxLines="1"
+                    android:textSize="18sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_marginBottom="60dp"/>
+
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="150dp"
+                android:layout_height="45dp"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                app:cardElevation="0dp"
+                app:cardCornerRadius="6dp"
+                >
+
+                <FrameLayout
+                    android:background="@color/ColorPrimary"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    >
+
+                    <RelativeLayout
+                        android:id="@+id/button_dle"
+                        android:background="?android:attr/selectableItemBackground"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:clickable="true"
+                        android:focusable="true"
+                        >
+
+                        <TextView
+                            android:textSize="18sp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="DALEJ"
+                            android:layout_centerInParent="true"
+                            android:textColor="@color/ColorWhite"
+                            android:textAlignment="center"
+                            android:gravity="center_horizontal" />
+                    </RelativeLayout>
+
+
+                </FrameLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="150dp"
+                android:orientation="horizontal"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+
+    <com.google.android.material.bottomappbar.BottomAppBar
+        android:id="@+id/bottomAppBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:backgroundTint="@color/ColorPrimary"
+        app:fabAlignmentMode="end"
+        app:fabCradleMargin="10dp"
+        app:fabCradleRoundedCornerRadius="20dp"
+        app:hideOnScroll="true"
+        app:itemIconTint="@color/ColorWhite"
+        app:menu="@menu/app_bar_menu"/>
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/button_delet_all_dle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/ColorAccent"
+        android:src="@drawable/ic_trash"
+        app:backgroundTint="@color/Mistake"
+        app:fabCustomSize="70dp"
+        app:layout_anchor="@id/bottomAppBar"
+        app:maxImageSize="40dp"
+        />
 
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
