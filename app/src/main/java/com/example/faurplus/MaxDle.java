@@ -122,7 +122,6 @@ public class MaxDle extends AppCompatActivity {
         aa = findViewById(R.id.t1);
         //block input data
         aa.setText("480");
-        //aa.setEnabled(false);
 
         gg = findViewById(R.id.t2);
         gg.setText("20");
@@ -147,6 +146,45 @@ public class MaxDle extends AppCompatActivity {
             }
         });
 
+/////////////////////TEST///////////////////////////////////////////////////
+        FloatingActionButton test = (FloatingActionButton)findViewById(R.id.test_numbers);
+        test.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+
+
+
+                        be.setText("3");
+
+
+                        ce.setText("30");
+
+
+                        de.setText("0");
+
+
+                        ee.setText("19");
+
+
+                        fe.setText("22");
+
+                        ie.setText("15");
+
+
+                        je.setText("5");
+
+
+                        me.setText("0");
+
+                        ne.setText("0");
+
+                        pe.setText("59");
+
+
+
+            }
+        });
 
 
 
@@ -159,16 +197,6 @@ public class MaxDle extends AppCompatActivity {
 
             check();
 
-//            if(Integer.parseInt(be.getText().toString()) > 0 &&
-//                    Integer.parseInt(ce.getText().toString()) > 0 &&
-//                    Integer.parseInt(de.getText().toString()) > 0 &&
-//                    Integer.parseInt(ee.getText().toString()) > 0 &&
-//                    Integer.parseInt(fe.getText().toString()) > 0 &&
-//                    Integer.parseInt(ie.getText().toString()) > 0 &&
-//                    Integer.parseInt(je.getText().toString()) > 0 &&
-//                    Integer.parseInt(me.getText().toString()) > 0 &&
-//                    Integer.parseInt(ne.getText().toString()) > 0 &&
-//                    Integer.parseInt(pe.getText().toString()) > 0 ){
 
                         b = Double.parseDouble(be.getText().toString());
                         c = Double.parseDouble(ce.getText().toString());
@@ -181,7 +209,7 @@ public class MaxDle extends AppCompatActivity {
                         p = Double.parseDouble(pe.getText().toString());
 
 
-//
+
                         double prox = b + e;
                         //готово
                         double ko = 1 - c / 100;
@@ -228,7 +256,6 @@ public class MaxDle extends AppCompatActivity {
                         double momo = prox * a;
                         double momom = mom / momo;
                         double formulaM = momom * m * 100;
-                        double m_ex = formulaM;
 
 
                         double fo = m * n * prox;
@@ -237,6 +264,7 @@ public class MaxDle extends AppCompatActivity {
 
 
                         double max = b_ex + d_ex + g_ex + h_ex + i_ex + j_ex + fofo;
+
                         double dleFinal = 100 - max;
 
                         double jnh = p * prox / dleFinal;
@@ -246,13 +274,26 @@ public class MaxDle extends AppCompatActivity {
 
 
 
+            System.out.println("fb_ex ------------------------------------------------ " + b_ex);
+            System.out.println("fd_ex ------------------------------------------------ " + d_ex);
+            System.out.println("fg_ex ------------------------------------------------ " + g_ex);
+            System.out.println("fh_ex ------------------------------------------------ " + h_ex);
+            System.out.println("fifi_ex_ex ------------------------------------------------ " + i_ex);
+            System.out.println("fj_ex ------------------------------------------------ " + j_ex);
+            System.out.println("fofo ------------------------------------------------ " + fofo);
+            System.out.println("max ------------------------------------------------ " + max);
+            System.out.println("fdle_final ------------------------------------------------ " + dleFinal);
+            System.out.println("fjnh ------------------------------------------------ " + jnh);
+            System.out.println("fgap_to_jnh ------------------------------------------------ " + gap_to_jnh);
+            System.out.println("-------------------------------------------");
+            System.out.println("-------------------------------------------");
+            System.out.println("-------------------------------------------");
+            System.out.println("-------------------------------------------");
+
 
                          //создание объекта Intent для запуска activity_anna_result
                         Intent intent = new Intent(this, DleResult.class);
                         // передача объекта с ключом "hello" и значением "Hello World"
-                        intent.putExtra("DLE", dleFinal);
-                        intent.putExtra("JNH", jnh);
-                        intent.putExtra("gap_to_jnh", gap_to_jnh);
                         intent.putExtra("b_ex", b_ex);
                         intent.putExtra("d_ex", d_ex);
                         intent.putExtra("g_ex", g_ex);
@@ -260,22 +301,14 @@ public class MaxDle extends AppCompatActivity {
                         intent.putExtra("i_ex", i_ex);
                         intent.putExtra("j_ex", j_ex);
                         intent.putExtra("fofo", fofo);
-
-
+                        intent.putExtra("DLE", dleFinal);
+                        intent.putExtra("JNH", jnh);
+                        intent.putExtra("gap_to_jnh", gap_to_jnh);
 
 
 
                         // запуск SecondActivity
                         startActivity(intent);
-//
-//            }else {
-//                foo();
-//
-//
-//
-//            }
-//
-//        });
 
 
 
