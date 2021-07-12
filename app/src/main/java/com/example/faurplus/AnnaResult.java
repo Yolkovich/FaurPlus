@@ -26,7 +26,7 @@ public class AnnaResult extends AppCompatActivity {
 
         ppm_1t.setText(String.format("%.1f", ppm_1));
         ppm_2t.setText(String.format("%.1f", ppm_2));
-        dle_1t.setText(String.format(final_dlee+""));
+        dle_1t.setText(String.format("%.1f", final_dlee));
 
     }
 }
