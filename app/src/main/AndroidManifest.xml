@@ -27,7 +27,8 @@
             android:parentActivityName=".MainActivity" />
         <activity
             android:name=".MaxDle"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".MainActivity"
+            android:windowSoftInputMode="adjustResize"/>
         <activity
             android:name=".Anna"
             android:parentActivityName=".MainActivity" />

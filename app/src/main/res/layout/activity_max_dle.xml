@@ -61,7 +61,7 @@
                 android:layout_margin="15dp"
                 android:layout_marginBottom="12dp"
                 android:hint="Number of GL per shift"
-                android:inputType="number"
+                android:inputType="phone"
                 app:startIconDrawable="@drawable/ic_bb"
                 app:startIconTint="@color/ColorPrimary"
                 app:endIconTint="@color/Mistake"
@@ -479,18 +479,7 @@
     </ScrollView>
 
 
-    <com.google.android.material.bottomappbar.BottomAppBar
-        android:id="@+id/bottomAppBar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom"
-        android:backgroundTint="@color/ColorPrimary"
-        app:fabAlignmentMode="end"
-        app:fabCradleMargin="10dp"
-        app:fabCradleRoundedCornerRadius="20dp"
-        app:hideOnScroll="true"
-        app:itemIconTint="@color/ColorWhite"
-        app:menu="@menu/app_bar_menu"/>
+
 
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -501,7 +490,25 @@
         android:src="@drawable/ic_trash"
         app:backgroundTint="@color/Mistake"
         app:fabCustomSize="70dp"
-        app:layout_anchor="@id/bottomAppBar"
+        android:layout_gravity="right|bottom"
+        android:layout_marginBottom="20dp"
+        android:layout_marginRight="20dp"
+
+        app:maxImageSize="40dp"
+        />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/test_numbers"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/ColorAccent"
+        android:src="@drawable/ic_trash"
+        app:backgroundTint="@color/Mistake"
+        app:fabCustomSize="70dp"
+        android:layout_gravity="right|bottom"
+        android:layout_marginBottom="150dp"
+        android:layout_marginRight="20dp"
+
         app:maxImageSize="40dp"
         />
 

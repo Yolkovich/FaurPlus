@@ -7,75 +7,387 @@
     tools:context=".DleResult">
 
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical" >
 
 
-    <com.google.android.material.textfield.TextInputLayout
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
-        android:layout_width="match_parent"
-        android:layout_height="58dp"
-        android:layout_margin="15dp"
-        android:focusable="false"
-
-        android:hint="DLE"
-        android:inputType="number"
-        android:longClickable="false"
-        android:visibility="visible"
-        app:boxStrokeColor="@color/GoodNews"
-        app:endIconMode="clear_text"
-        app:endIconTint="@color/Mistake"
-        app:startIconDrawable="@drawable/ic_ok"
-        app:startIconTint="@color/GoodNews"
-        tools:layout_editor_absoluteX="15dp">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/dle_answer"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:cursorVisible="false"
-            android:fontFamily="@font/secularone_regular"
-            android:inputType="number"
-            android:maxLength="10"
-            android:maxLines="1"
-            android:textSize="18sp" />
-
-    </com.google.android.material.textfield.TextInputLayout>
-
-            <com.google.android.material.textfield.TextInputLayout
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="58dp"
-                android:layout_margin="15dp"
-                android:focusable="false"
-
-                android:hint="JNH"
-                android:inputType="number"
-                android:longClickable="false"
-                android:visibility="visible"
-                app:boxStrokeColor="@color/GoodNews"
-                app:endIconMode="clear_text"
-                app:endIconTint="@color/Mistake"
-                app:startIconDrawable="@drawable/ic_ok"
-                app:startIconTint="@color/GoodNews"
-                tools:layout_editor_absoluteX="15dp">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/jnh"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <pl.droidsonroids.gif.GifImageView
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:cursorVisible="false"
-                    android:fontFamily="@font/secularone_regular"
+                    android:layout_height="280dp"
+                    android:src="@drawable/dle_result"/>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                    android:layout_width="match_parent"
+                    android:layout_height="58dp"
+                    android:layout_margin="15dp"
+                    android:focusable="false"
+                    android:hint="DLE"
                     android:inputType="number"
-                    android:maxLength="10"
-                    android:maxLines="1"
-                    android:textSize="18sp" />
+                    android:longClickable="false"
+                    android:textColorHint="@color/black"
+                    android:visibility="visible"
+                    app:boxStrokeColor="@color/GoodNews"
 
-            </com.google.android.material.textfield.TextInputLayout>
+                    app:endIconMode="clear_text"
+                    app:endIconTint="@color/Mistake"
+                    app:startIconDrawable="@drawable/ic_ok"
+                    app:startIconTint="@color/GoodNews"
+                    tools:layout_editor_absoluteX="15dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/dle_answer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:cursorVisible="false"
+                        android:fontFamily="@font/secularone_regular"
+                        android:inputType="number"
+                        android:maxLength="10"
+                        android:maxLines="1"
+
+                        android:textColor="@color/black"
+                        android:textSize="18sp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                    android:layout_width="match_parent"
+                    android:layout_height="58dp"
+                    android:layout_margin="15dp"
+                    android:focusable="false"
+
+                    android:hint="JNH"
+                    android:inputType="number"
+                    android:longClickable="false"
+                    android:textColorHint="@color/black"
+                    android:visibility="visible"
+                    app:boxStrokeColor="@color/GoodNews"
+                    app:endIconMode="clear_text"
+                    app:endIconTint="@color/Mistake"
+                    app:startIconDrawable="@drawable/ic_ok"
+                    app:startIconTint="@color/GoodNews"
+                    tools:layout_editor_absoluteX="15dp"
+
+                    >
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/jnh"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:cursorVisible="false"
+                        android:fontFamily="@font/secularone_regular"
+                        android:inputType="number"
+                        android:maxLength="10"
+                        android:maxLines="1"
+                        android:textColor="@color/black"
+                        android:textSize="18sp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                    android:layout_width="match_parent"
+                    android:layout_height="58dp"
+                    android:layout_margin="15dp"
+                    android:focusable="false"
+
+                    android:hint="Gap to JNH (per shift)"
+                    android:inputType="number"
+                    android:longClickable="false"
+                    android:textColorHint="@color/black"
+
+                        android:textColor="@color/black"
+                    android:visibility="visible"
+                    app:boxStrokeColor="@color/GoodNews"
+                    app:endIconMode="clear_text"
+                    app:startIconDrawable="@drawable/ic_ok"
+                    app:startIconTint="@color/GoodNews"
+                    tools:layout_editor_absoluteX="15dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/gap_to_jnh"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:cursorVisible="false"
+                        android:fontFamily="@font/secularone_regular"
+                        android:inputType="number"
+                        android:maxLength="10"
+                        android:maxLines="1"
+                        android:textColor="@color/black"
+                        android:textSize="18sp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <TextView
+                    android:layout_width="250dp"
+                    android:layout_height="1dp"
+                    android:layout_gravity="center"
+
+                        android:textColor="@color/black"
+                    android:layout_margin="10dp"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginEnd="13dp"
+                    android:layout_marginRight="0dp"
+                    android:background="@color/Mistake" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                    android:layout_width="match_parent"
+                    android:layout_height="58dp"
+                    android:layout_margin="15dp"
+                    android:focusable="false"
+
+                    android:hint="B"
+                    android:inputType="number"
+                    android:longClickable="false"
+                    android:textColorHint="@color/black"
+                    android:visibility="visible"
+                    app:boxStrokeColor="@color/GoodNews"
+                    app:endIconMode="clear_text"
+                    app:endIconTint="@color/Mistake"
+                    app:startIconDrawable="@drawable/ic_percent"
+                    app:startIconTint="@color/black"
+                    tools:layout_editor_absoluteX="15dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/be"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:cursorVisible="false"
+                        android:fontFamily="@font/secularone_regular"
+                        android:inputType="number"
+                        android:maxLength="10"
+                        android:maxLines="1"
+
+                        android:textColor="@color/black"
+                        android:textSize="18sp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
 
 
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                    android:layout_width="match_parent"
+                    android:layout_height="58dp"
+                    android:layout_margin="15dp"
+                    android:focusable="false"
 
+                    android:hint="D"
+                    android:inputType="number"
+                    android:longClickable="false"
+                    android:textColorHint="@color/black"
+                    android:visibility="visible"
+                    app:boxStrokeColor="@color/GoodNews"
+                    app:endIconMode="clear_text"
+                    app:endIconTint="@color/Mistake"
+                    app:startIconDrawable="@drawable/ic_percent"
+                    app:startIconTint="@color/black"
+                    tools:layout_editor_absoluteX="15dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/de"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:cursorVisible="false"
+                        android:fontFamily="@font/secularone_regular"
+                        android:inputType="number"
+
+                        android:maxLength="10"
+                        android:maxLines="1"
+                        android:textColor="@color/black"
+                        android:textSize="18sp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                    android:layout_width="match_parent"
+                    android:layout_height="58dp"
+                    android:layout_margin="15dp"
+                    android:focusable="false"
+
+                    android:hint="G"
+                    android:inputType="number"
+                    android:longClickable="false"
+                    android:textColorHint="@color/black"
+                    android:visibility="visible"
+                    app:boxStrokeColor="@color/GoodNews"
+                    app:endIconMode="clear_text"
+                    app:endIconTint="@color/Mistake"
+                    app:startIconDrawable="@drawable/ic_percent"
+                    app:startIconTint="@color/black"
+                    tools:layout_editor_absoluteX="15dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/ge"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:cursorVisible="false"
+                        android:fontFamily="@font/secularone_regular"
+                        android:inputType="number"
+                        android:maxLength="10"
+
+                        android:maxLines="1"
+                        android:textColor="@color/black"
+                        android:textSize="18sp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                    android:layout_width="match_parent"
+                    android:layout_height="58dp"
+                    android:layout_margin="15dp"
+                    android:focusable="false"
+
+                    android:hint="H"
+                    android:inputType="number"
+                    android:longClickable="false"
+                    android:textColorHint="@color/black"
+                    android:visibility="visible"
+                    app:boxStrokeColor="@color/GoodNews"
+                    app:endIconMode="clear_text"
+                    app:endIconTint="@color/Mistake"
+                    app:startIconDrawable="@drawable/ic_percent"
+                    app:startIconTint="@color/black"
+                    tools:layout_editor_absoluteX="15dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/he"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:cursorVisible="false"
+                        android:fontFamily="@font/secularone_regular"
+                        android:inputType="number"
+                        android:maxLength="10"
+                        android:maxLines="1"
+
+                        android:textColor="@color/black"
+                        android:textSize="18sp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                    android:layout_width="match_parent"
+                    android:layout_height="58dp"
+                    android:layout_margin="15dp"
+                    android:focusable="false"
+
+                    android:hint="I"
+                    android:inputType="number"
+                    android:longClickable="false"
+                    android:textColorHint="@color/black"
+                    android:visibility="visible"
+                    app:boxStrokeColor="@color/GoodNews"
+                    app:endIconMode="clear_text"
+                    app:endIconTint="@color/Mistake"
+                    app:startIconDrawable="@drawable/ic_percent"
+                    app:startIconTint="@color/black"
+                    tools:layout_editor_absoluteX="15dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/ie"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:cursorVisible="false"
+                        android:fontFamily="@font/secularone_regular"
+                        android:inputType="number"
+                        android:maxLength="10"
+                        android:maxLines="1"
+
+                        android:textColor="@color/black"
+                        android:textSize="18sp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                    android:layout_width="match_parent"
+                    android:layout_height="58dp"
+                    android:layout_margin="15dp"
+                    android:focusable="false"
+
+                    android:hint="J"
+                    android:inputType="number"
+                    android:longClickable="false"
+                    android:textColorHint="@color/black"
+                    android:visibility="visible"
+                    app:boxStrokeColor="@color/GoodNews"
+                    app:endIconMode="clear_text"
+                    app:endIconTint="@color/Mistake"
+                    app:startIconDrawable="@drawable/ic_percent"
+                    app:startIconTint="@color/black"
+                    tools:layout_editor_absoluteX="15dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/je"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:cursorVisible="false"
+                        android:fontFamily="@font/secularone_regular"
+                        android:inputType="number"
+                        android:maxLength="10"
+                        android:maxLines="1"
+
+                        android:textColor="@color/black"
+                        android:textSize="18sp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                    android:layout_width="match_parent"
+                    android:layout_height="58dp"
+                    android:layout_margin="15dp"
+                    android:focusable="false"
+
+                    android:hint="N"
+                    android:inputType="number"
+                    android:longClickable="false"
+                    android:textColorHint="@color/black"
+                    android:visibility="visible"
+                    app:boxStrokeColor="@color/GoodNews"
+                    app:endIconMode="clear_text"
+                    app:endIconTint="@color/Mistake"
+                    app:startIconDrawable="@drawable/ic_percent"
+                    app:startIconTint="@color/black"
+                    tools:layout_editor_absoluteX="15dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/ne"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:cursorVisible="false"
+                        android:fontFamily="@font/secularone_regular"
+                        android:inputType="number"
+                        android:maxLength="10"
+                        android:maxLines="1"
+                        android:textColor="@color/black"
+                        android:textSize="18sp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+            </LinearLayout>
         </LinearLayout>
+                </ScrollView>
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
