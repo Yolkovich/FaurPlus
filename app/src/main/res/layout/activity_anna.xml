@@ -279,20 +279,6 @@
 </ScrollView>
 
 
-    <com.google.android.material.bottomappbar.BottomAppBar
-        android:id="@+id/bottomAppBar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom"
-        android:backgroundTint="@color/ColorPrimary"
-        app:fabAlignmentMode="end"
-        app:fabCradleMargin="10dp"
-        app:fabCradleRoundedCornerRadius="20dp"
-        app:hideOnScroll="true"
-        app:itemIconTint="@color/ColorWhite"
-        app:menu="@menu/app_bar_menu" />
-
-
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/button_delet_all"
         android:layout_width="wrap_content"
@@ -301,8 +287,15 @@
         android:src="@drawable/ic_trash"
         app:backgroundTint="@color/Mistake"
         app:fabCustomSize="70dp"
-        app:layout_anchor="@id/bottomAppBar"
-        app:maxImageSize="40dp" />
+        android:layout_gravity="right|bottom"
+        android:layout_marginBottom="20dp"
+        android:layout_marginRight="20dp"
+
+        app:maxImageSize="40dp"
+        />
+
+
+
 
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
