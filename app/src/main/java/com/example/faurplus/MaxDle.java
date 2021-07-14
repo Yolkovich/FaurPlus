@@ -232,7 +232,7 @@ public class MaxDle extends AppCompatActivity {
 
 
         button_2.setOnClickListener(view -> {
-            System.out.println(count);
+
             boolean stop;
             check();
             if (count >= 1) {
@@ -240,6 +240,9 @@ public class MaxDle extends AppCompatActivity {
             } else {
                 stop = false;
             }
+
+
+
             if(be.getText().toString().equals("Puste pole") ||
             ce.getText().toString().equals("Puste pole") ||
             de.getText().toString().equals("Puste pole") ||
@@ -250,154 +253,154 @@ public class MaxDle extends AppCompatActivity {
             me.getText().toString().equals("Puste pole") ||
             ne.getText().toString().equals("Puste pole") ||
             pe.getText().toString().equals("Puste pole"))    {
-                System.out.println("вот так вот просто придумалось");
+                System.err.println("во всех полях пустота");
+                count++;
             }   else {
 
-            if (!stop) {
+                if (stop) {
 
-                if (be.getText().toString().equals("Puste pole")) {
-                    be.setText(0 + "");
+                    if (be.getText().toString().equals("Puste pole")) {
+                        be.setText(0 + "");
+                    }
+
+                    if (ce.getText().toString().equals("Puste pole")) {
+                        ce.setText(0 + "");
+                    }
+
+                    if (de.getText().toString().equals("Puste pole")) {
+                        de.setText(0 + "");
+                    }
+
+                    if (ee.getText().toString().equals("Puste pole")) {
+                        ee.setText(0 + "");
+                    }
+
+                    if (fe.getText().toString().equals("Puste pole")) {
+                        fe.setText(0 + "");
+                    }
+
+                    if (ie.getText().toString().equals("Puste pole")) {
+                        ie.setText(0 + "");
+                    }
+
+                    if (je.getText().toString().equals("Puste pole")) {
+                        je.setText(0 + "");
+                    }
+
+                    if (me.getText().toString().equals("Puste pole")) {
+                        me.setText(0 + "");
+                    }
+
+                    if (ne.getText().toString().equals("Puste pole")) {
+                        ne.setText(0 + "");
+                    }
+
+                    if (pe.getText().toString().equals("Puste pole")) {
+                        pe.setText(0 + "");
+                    }
+                    if (be.getText().toString().equals("Puste pole")) {
+                        be.setText(0 + "");
+                    }
                 }
 
-                if (ce.getText().toString().equals("Puste pole")) {
-                    ce.setText(0 + "");
-                }
+                    stop = true;
 
-                if (de.getText().toString().equals("Puste pole")) {
-                    de.setText(0 + "");
-                }
+                if (stop) {
+                    b = Double.parseDouble(be.getText().toString());
+                    c = Double.parseDouble(ce.getText().toString());
+                    d = Double.parseDouble(de.getText().toString());
+                    e = Double.parseDouble(ee.getText().toString());
+                    i = Double.parseDouble(ie.getText().toString());
+                    j = Double.parseDouble(je.getText().toString());
+                    m = Double.parseDouble(me.getText().toString());
+                    n = Double.parseDouble(ne.getText().toString());
+                    p = Double.parseDouble(pe.getText().toString());
 
-                if (ee.getText().toString().equals("Puste pole")) {
-                    ee.setText(0 + "");
-                }
+                    double prox = b + e;
+                    //готово
+                    double ko = 1 - c / 100;
+                    double b_ex = b * ko / prox * 100;
 
-                if (fe.getText().toString().equals("Puste pole")) {
-                    fe.setText(0 + "");
-                }
+                    //готово
+                    double d_ex = d / prox * 100;
 
-                if (ie.getText().toString().equals("Puste pole")) {
-                    ie.setText(0 + "");
-                }
+                    //готово
+                    double po = c / 100 * b;
+                    double pop = e + po;
+                    double popo = prox * a;
+                    double popop = pop / popo;
+                    double formulaG = popop * 20 * 100;
+                    double g_ex = formulaG;
 
-                if (je.getText().toString().equals("Puste pole")) {
-                    je.setText(0 + "");
-                }
+                    //готово
+                    double ho = c / 100 * b;
+                    double hoh = e + ho;
+                    double hoho = prox * a;
+                    double hohoh = hoh / hoho;
+                    double formulaH = hohoh * 5 * 100;
+                    double h_ex = formulaH;
 
-                if (me.getText().toString().equals("Puste pole")) {
-                    me.setText(0 + "");
-                }
+                    //готово
+                    double io = c / 100 * b;
+                    double ioi = e + io;
+                    double ioio = prox * a;
+                    double ioioi = ioi / ioio;
+                    double formulaI = ioioi * i * 100;
+                    double i_ex = formulaI;
 
-                if (ne.getText().toString().equals("Puste pole")) {
-                    ne.setText(0 + "");
-                }
+                    //готово
+                    double jo = c / 100 * b;
+                    double joj = e + jo;
+                    double jojo = prox * a;
+                    double jojoj = joj / jojo;
+                    double formulaJ = jojoj * j * 100;
+                    double j_ex = formulaJ;
 
-                if (pe.getText().toString().equals("Puste pole")) {
-                    pe.setText(0 + "");
-                }
-            }
-
-            if (be.getText().toString().equals("Puste pole")) {
-                be.setText(0 + "");
-            }
-            if (stop) {
-                b = Double.parseDouble(be.getText().toString());
-                c = Double.parseDouble(ce.getText().toString());
-                d = Double.parseDouble(de.getText().toString());
-                e = Double.parseDouble(ee.getText().toString());
-                i = Double.parseDouble(ie.getText().toString());
-                j = Double.parseDouble(je.getText().toString());
-                m = Double.parseDouble(me.getText().toString());
-                n = Double.parseDouble(ne.getText().toString());
-                p = Double.parseDouble(pe.getText().toString());
-
-                double prox = b + e;
-                //готово
-                double ko = 1 - c / 100;
-                double b_ex = b * ko / prox * 100;
-
-                //готово
-                double d_ex = d / prox * 100;
-
-                //готово
-                double po = c / 100 * b;
-                double pop = e + po;
-                double popo = prox * a;
-                double popop = pop / popo;
-                double formulaG = popop * 20 * 100;
-                double g_ex = formulaG;
-
-                //готово
-                double ho = c / 100 * b;
-                double hoh = e + ho;
-                double hoho = prox * a;
-                double hohoh = hoh / hoho;
-                double formulaH = hohoh * 5 * 100;
-                double h_ex = formulaH;
-
-                //готово
-                double io = c / 100 * b;
-                double ioi = e + io;
-                double ioio = prox * a;
-                double ioioi = ioi / ioio;
-                double formulaI = ioioi * i * 100;
-                double i_ex = formulaI;
-
-                //готово
-                double jo = c / 100 * b;
-                double joj = e + jo;
-                double jojo = prox * a;
-                double jojoj = joj / jojo;
-                double formulaJ = jojoj * j * 100;
-                double j_ex = formulaJ;
-
-                //готово
-                double mo = c / 100 * b;
-                double mom = e + mo;
-                double momo = prox * a;
-                double momom = mom / momo;
-                double formulaM = momom * m * 100;
+                    //готово
+                    double mo = c / 100 * b;
+                    double mom = e + mo;
+                    double momo = prox * a;
+                    double momom = mom / momo;
+                    double formulaM = momom * m * 100;
 
 
-                double fo = m * n * prox;
-                double fof = prox * a;
-                double fofo = fo / fof * 100;
+                    double fo = m * n * prox;
+                    double fof = prox * a;
+                    double fofo = fo / fof * 100;
 
 
-                double max = b_ex + d_ex + g_ex + h_ex + i_ex + j_ex + fofo;
+                    double max = b_ex + d_ex + g_ex + h_ex + i_ex + j_ex + fofo;
 
-                double dleFinal = 100 - max;
+                    double dleFinal = 100 - max;
 
-                double jnh = p * prox / dleFinal;
+                    double jnh = p * prox / dleFinal;
 
-                double gap_to_jnh = prox - jnh;
+                    double gap_to_jnh = prox - jnh;
 
 
-                if (Integer.parseInt(be.getText().toString()) >= 0   &&
-                        Integer.parseInt(ce.getText().toString()) >= 0 &&
-                        Integer.parseInt(de.getText().toString()) >= 0 &&
-                        Integer.parseInt(ee.getText().toString()) >= 0 &&
-                        Integer.parseInt(fe.getText().toString()) >= 0 &&
-                        Integer.parseInt(ie.getText().toString()) >= 0 &&
-                        Integer.parseInt(je.getText().toString()) >= 0 &&
-                        Integer.parseInt(me.getText().toString()) >= 0 &&
-                        Integer.parseInt(ne.getText().toString()) >= 0 &&
-                        Integer.parseInt(pe.getText().toString()) >= 0) {
+                    if (Integer.parseInt(be.getText().toString()) >= 0   &&
+                            Integer.parseInt(ce.getText().toString()) >= 0 &&
+                            Integer.parseInt(de.getText().toString()) >= 0 &&
+                            Integer.parseInt(ee.getText().toString()) >= 0 &&
+                            Integer.parseInt(fe.getText().toString()) >= 0 &&
+                            Integer.parseInt(ie.getText().toString()) >= 0 &&
+                            Integer.parseInt(je.getText().toString()) >= 0 &&
+                            Integer.parseInt(me.getText().toString()) >= 0 &&
+                            Integer.parseInt(ne.getText().toString()) >= 0 &&
+                            Integer.parseInt(pe.getText().toString()) >= 0) {
 
-                    //создание объекта Intent для запуска activity_anna_result
-                    Intent intent = new Intent(this, DleResult.class);
-                    // передача объекта с ключом "hello" и значением "Hello World"
-                    intent.putExtra("b_ex", b_ex);
-                    intent.putExtra("d_ex", d_ex);
-                    intent.putExtra("g_ex", g_ex);
-                    intent.putExtra("h_ex", h_ex);
-                    intent.putExtra("i_ex", i_ex);
-                    intent.putExtra("j_ex", j_ex);
-                    intent.putExtra("fofo", fofo);
-                    intent.putExtra("DLE", dleFinal);
-                    intent.putExtra("JNH", jnh);
-                    intent.putExtra("gap_to_jnh", gap_to_jnh);
-                    // запуск SecondActivity
-                    startActivity(intent);
+                        Intent intent = new Intent(MaxDle.this, DleResult.class);
+                        intent.putExtra("b_ex", b_ex);
+                        intent.putExtra("d_ex", d_ex);
+                        intent.putExtra("g_ex", g_ex);
+                        intent.putExtra("h_ex", h_ex);
+                        intent.putExtra("i_ex", i_ex);
+                        intent.putExtra("j_ex", j_ex);
+                        intent.putExtra("fofo", fofo);
+                        intent.putExtra("DLE", dleFinal);
+                        intent.putExtra("JNH", jnh);
+                        intent.putExtra("gap_to_jnh", gap_to_jnh);
+                        startActivity(intent);
 
 
                 }   }
