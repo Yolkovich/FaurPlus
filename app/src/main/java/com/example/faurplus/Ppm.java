@@ -109,7 +109,7 @@ public class Ppm extends AppCompatActivity {
 
             double dle = (allGood * number1) / timeD / 3600 / 4 * 100;
 
-                Intent intent = new Intent(Ppm.this, DleResult.class);
+                Intent intent = new Intent(Ppm.this, PpmResult.class);
                 intent.putExtra("ppm", ppm);
                 intent.putExtra("dle", dle);
 
