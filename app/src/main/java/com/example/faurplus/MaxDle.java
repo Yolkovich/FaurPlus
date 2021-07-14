@@ -6,16 +6,22 @@ import androidx.coordinatorlayout.widget.CoordinatorLayout;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import android.text.TextWatcher;
+
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 
 import org.w3c.dom.Text;
+
+import java.util.Arrays;
 
 public class MaxDle extends AppCompatActivity {
 
@@ -400,10 +406,40 @@ public class MaxDle extends AppCompatActivity {
                 }   }
 
                }
-    });}
+    });
+
+        for (EditText editText : Arrays.asList(de, be, ee)) {
+            editText.addTextChangedListener(new TextWatcher() {
+
+                public void afterTextChanged(Editable s) {
+                }
+
+                public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+                }
+
+                public void onTextChanged(CharSequence s, int start, int before, int count) {//слушатель при изминении текста
+                    fe.setText(number(de.getText().toString()) + number(be.getText().toString()) + number(ee.getText().toString()) + "");
+                }
+            });
+        }//слушатель при изминении текста
+//слушатель при изминении текста
+
+    }
+
+    public int number(String text) {
+        try {
+            return Integer.valueOf(text);//есл число то выводит значение
+        } catch (NumberFormatException e) {
+            return 0;//если текст
+        }
 
 
 
 
 
-}
+
+
+
+
+
+    }}
