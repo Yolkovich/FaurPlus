@@ -169,9 +169,8 @@ public class Anna extends AppCompatActivity  {
                             Integer.parseInt(v43x_ok.getText().toString()) > 0 &&
                             Integer.parseInt(v43x_nok.getText().toString()) > 0 &&
                             Integer.parseInt(quantit_hours.getText().toString()) > 0 ){
-                        // создание объекта Intent для запуска activity_anna_result
-                        Intent intent = new Intent(this, AnnaResult.class);
-                        // передача объекта с ключом "hello" и значением "Hello World"
+
+                        Intent intent = new Intent(Anna.this, AnnaResult.class);
                         intent.putExtra("ppm_1", final_ppm1);
                         intent.putExtra("ppm_2", final_ppm2);
                         intent.putExtra("final_dlee", final_dlee);
