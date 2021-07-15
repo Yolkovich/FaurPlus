@@ -5,6 +5,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.EditText;
 
+import java.math.BigDecimal;
+
 public class PpmResult extends AppCompatActivity {
 
     EditText ppmF, dleF;
@@ -24,8 +26,10 @@ public class PpmResult extends AppCompatActivity {
         ppmF.setText(String.format("%.0f", ppm));
 
 
+
+        System.out.println("dle=================" + dle);
         dleF = findViewById(R.id.dle);
-        dleF.setText(String.format("%.2f", dle));
+        dleF.setText(String.format("%.3f", dle));
 
 
     }
