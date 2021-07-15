@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="forwardRight" type="id" />
+    <item name="ForwardDefective" type="id" />
+    <item name="forwardLeft" type="id" />
+</resources>
