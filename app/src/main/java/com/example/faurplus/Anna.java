@@ -29,6 +29,7 @@ public class Anna extends AppCompatActivity  {
     CoordinatorLayout constraintLayout;
     RelativeLayout button_1;
     private CoordinatorLayout coordinatorLayout;
+    static int count;
 
 
 
@@ -43,7 +44,7 @@ public class Anna extends AppCompatActivity  {
 
     public void foo(){
         Snackbar snackbar = Snackbar.make(coordinatorLayout, "", Snackbar.LENGTH_LONG);
-        View custom = getLayoutInflater().inflate(R.layout.snack_bur_custom, null);
+        View custom = getLayoutInflater().inflate(R.layout.snack_bur_custom_max_dle, null);
         snackbar.getView().setBackgroundColor(Color.TRANSPARENT);
         Snackbar.SnackbarLayout snackbarLayout = (Snackbar.SnackbarLayout) snackbar.getView();
         snackbarLayout.setPadding(0, 0, 0, 0);
@@ -57,24 +58,34 @@ public class Anna extends AppCompatActivity  {
     public void check(){
 
         if (v426_ok.getText().length() == 0) {
-            v426_ok.setText("0");
+            v426_ok.setText("Puste pole");
+            v426_ok.setBackgroundColor(0xff00ff00);
+            count++;
             foo();}
 
         if (v426_nok.getText().length() == 0) {
-            v426_nok.setText("0");
-            foo();}
+            v426_nok.setText("Puste pole");
+            v426_nok.setBackgroundColor(0xff00ff00);
+            foo();
+            count++;}
 
         if (v43x_ok.getText().length() == 0) {
-            v43x_ok.setText("0");
-            foo();}
+            v43x_ok.setText("Puste pole");
+            v43x_ok.setBackgroundColor(0xff00ff00);
+            foo();
+            count++;}
 
         if (v43x_nok.getText().length() == 0) {
-            v43x_nok.setText("0");
-            foo();}
+            v43x_nok.setText("Puste pole");
+            v43x_nok.setBackgroundColor(0xff00ff00);
+            foo();
+            count++;}
 
         if (quantit_hours.getText().length() == 0) {
-            quantit_hours.setText("0");
-            foo();}
+            quantit_hours.setText("Puste pole");
+            quantit_hours.setBackgroundColor(0xff00ff00);
+            foo();
+            count++;}
     }
 
 
@@ -107,53 +118,82 @@ public class Anna extends AppCompatActivity  {
             button_1.setOnClickListener(view -> {
 
 
-                    check();
+                boolean stop;
+                check();
+                if (count >= 1) {
+                    stop = true;
+                } else {
+                    stop = false;
+                }
 
-                    //PPM1
-                    double int426ok = Integer.parseInt(v43x_ok.getText().toString());
-                    double int426nok = Integer.parseInt(v43x_nok.getText().toString());
-                    double million = 1_000_000;
-                    double ex1 = int426nok * million;
-                    double sum_ppm1 = int426nok + int426ok;
-                    double final_ppm1 = ex1 / sum_ppm1;
+                if(v426_ok.getText().toString().equals("Puste pole") ||
+                        v426_nok.getText().toString().equals("Puste pole") ||
+                        v43x_ok.getText().toString().equals("Puste pole") ||
+                        v43x_nok.getText().toString().equals("Puste pole") ||
+                        quantit_hours.getText().toString().equals("Puste pole")){
+                    count++;
+                }else{
+                    if(stop){
+                        if(v426_ok.getText().toString().equals("Puste pole")){
+                            v426_ok.setText(0 + "");
+                        }
+                        if(v426_nok.getText().toString().equals("Puste pole")){
+                            v426_nok.setText(0 + "");
+                        }
+                        if(v43x_ok.getText().toString().equals("Puste pole")){
+                            v43x_ok.setText(0 + "");
+                        }
+                        if(v43x_nok.getText().toString().equals("Puste pole")){
+                            v43x_nok.setText(0 + "");
+                        }
+                        if(quantit_hours.getText().toString().equals("Puste pole")){
+                            quantit_hours.setText(0 + "");
+                        }
+                    }
+                    stop = true;
+
+                    if (stop) {
+                        //PPM1
+                        double int426ok = Integer.parseInt(v43x_ok.getText().toString());
+                        double int426nok = Integer.parseInt(v43x_nok.getText().toString());
+                        double million = 1_000_000;
+                        double ex1 = int426nok * million;
+                        double sum_ppm1 = int426nok + int426ok;
+                        double final_ppm1 = ex1 / sum_ppm1;
 
 
-                    //PPM2
-                    double intv43x_ok = Integer.parseInt(v426_ok.getText().toString());
-                    double intv43x_nok = Integer.parseInt(v426_nok.getText().toString());
-                    double million2 = 1_000_000;
-                    double ex2 = intv43x_nok * million2;
-                    double sum_ppm2 = intv43x_nok + intv43x_ok;
-                    double final_ppm2 = ex2 / sum_ppm2;
+                        //PPM2
+                        double intv43x_ok = Integer.parseInt(v426_ok.getText().toString());
+                        double intv43x_nok = Integer.parseInt(v426_nok.getText().toString());
+                        double million2 = 1_000_000;
+                        double ex2 = intv43x_nok * million2;
+                        double sum_ppm2 = intv43x_nok + intv43x_ok;
+                        double final_ppm2 = ex2 / sum_ppm2;
 
 
-                    //DLE
-                    double hours = Double.parseDouble(quantit_hours.getText().toString());
-                    double sum_ok = int426ok + intv43x_ok;
-                    double final_dle = sum_ok * 1200 / hours / 3600 / 4 * 100;
-                    double final_dlee = Math.floor(final_dle * 10) / 10.0;
+                        //DLE
+                        double hours = Double.parseDouble(quantit_hours.getText().toString());
+                        double sum_ok = int426ok + intv43x_ok;
+                        double final_dle = sum_ok * 1200 / hours / 3600 / 4 * 100;
+                        double final_dlee = Math.floor(final_dle * 10) / 10.0;
 
+                        if (Integer.parseInt(v426_ok.getText().toString()) >= 0 &&
+                                Integer.parseInt(v426_nok.getText().toString()) >= 0 &&
+                                Integer.parseInt(v43x_ok.getText().toString()) >= 0 &&
+                                Integer.parseInt(v43x_nok.getText().toString()) >= 0 &&
+                                Integer.parseInt(quantit_hours.getText().toString()) >= 0) {
 
-
-                    if(Integer.parseInt(v426_ok.getText().toString()) > 0 &&
-                            Integer.parseInt(v426_nok.getText().toString()) > 0 &&
-                            Integer.parseInt(v43x_ok.getText().toString()) > 0 &&
-                            Integer.parseInt(v43x_nok.getText().toString()) > 0 &&
-                            Integer.parseInt(quantit_hours.getText().toString()) > 0 ){
-
-                        Intent intent = new Intent(Anna.this, AnnaResult.class);
-                        intent.putExtra("ppm_1", final_ppm1);
-                        intent.putExtra("ppm_2", final_ppm2);
-                        intent.putExtra("final_dlee", final_dlee);
-                        // запуск SecondActivity
-                        startActivity(intent);
-
-                    }else {
-                       foo();
-
+                            Intent intent = new Intent(Anna.this, AnnaResult.class);
+                            intent.putExtra("ppm_1", final_ppm1);
+                            intent.putExtra("ppm_2", final_ppm2);
+                            intent.putExtra("final_dlee", final_dlee);
+                            // запуск SecondActivity
+                            startActivity(intent);
+                        }
 
 
                     }
+                }
 
             });
 
