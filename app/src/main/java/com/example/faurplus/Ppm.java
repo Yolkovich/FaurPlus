@@ -39,6 +39,8 @@ public class Ppm extends AppCompatActivity {
 
         difective.setText("");
 
+        time.setText("");
+
     }
 
     public void foo(){
