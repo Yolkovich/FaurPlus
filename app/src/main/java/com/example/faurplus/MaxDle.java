@@ -185,45 +185,45 @@ public class MaxDle extends AppCompatActivity {
             }
         });
 
-/////////////////////TEST///////////////////////////////////////////////////
-        FloatingActionButton test = (FloatingActionButton)findViewById(R.id.test_numbers);
-        test.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-
-
-
-                        be.setText("3");
-
-
-                        ce.setText("30");
-
-
-                        de.setText("0");
-
-
-                        ee.setText("19");
-
-
-                        fe.setText("22");
-
-                        ie.setText("15");
-
-
-                        je.setText("5");
-
-
-                        me.setText("0");
-
-                        ne.setText("0");
-
-                        pe.setText("59");
-
-
-
-            }
-        });
+///////////////////////TEST///////////////////////////////////////////////////
+//        FloatingActionButton test = (FloatingActionButton)findViewById(R.id.test_numbers);
+//        test.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//
+//
+//
+//
+//                        be.setText("3");
+//
+//
+//                        ce.setText("30");
+//
+//
+//                        de.setText("0");
+//
+//
+//                        ee.setText("19");
+//
+//
+//                        fe.setText("22");
+//
+//                        ie.setText("15");
+//
+//
+//                        je.setText("5");
+//
+//
+//                        me.setText("0");
+//
+//                        ne.setText("0");
+//
+//                        pe.setText("59");
+//
+//
+//
+//            }
+//        });
 
 
 

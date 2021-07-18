@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Ppm">
+    tools:context=".Ppm"
+    android:id="@+id/materialToolbar">
 
         <ScrollView
             android:layout_width="match_parent"
@@ -338,25 +339,24 @@
         android:layout_gravity="right|bottom"
         android:layout_marginBottom="20dp"
         android:layout_marginRight="20dp"
-
         app:maxImageSize="40dp"
         />
 
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/test_numbers"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@color/ColorAccent"
-        android:src="@drawable/ic_trash"
-        app:backgroundTint="@color/Mistake"
-        app:fabCustomSize="70dp"
-        android:layout_gravity="right|bottom"
-        android:layout_marginBottom="150dp"
-        android:layout_marginRight="20dp"
+<!--    <com.google.android.material.floatingactionbutton.FloatingActionButton-->
+<!--        android:id="@+id/test_numbers"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:background="@color/ColorAccent"-->
+<!--        android:src="@drawable/ic_trash"-->
+<!--        app:backgroundTint="@color/Mistake"-->
+<!--        app:fabCustomSize="70dp"-->
+<!--        android:layout_gravity="right|bottom"-->
+<!--        android:layout_marginBottom="150dp"-->
+<!--        android:layout_marginRight="20dp"-->
 
-        app:maxImageSize="40dp"
-        />
+<!--        app:maxImageSize="40dp"-->
+<!--        />-->
 
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

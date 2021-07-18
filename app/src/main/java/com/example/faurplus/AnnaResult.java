@@ -24,9 +24,9 @@ public class AnnaResult extends AppCompatActivity {
         double final_dlee = arguments.getDouble("final_dlee");
 
 
-        ppm_1t.setText(String.format("%.1f", ppm_1));
-        ppm_2t.setText(String.format("%.1f", ppm_2));
-        dle_1t.setText(String.format("%.1f", final_dlee));
+        ppm_1t.setText(String.format("%.2f", ppm_1));
+        ppm_2t.setText(String.format("%.2f", ppm_2));
+        dle_1t.setText(String.format("%.2f", final_dlee));
 
     }
 }

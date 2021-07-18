@@ -1,17 +1,18 @@
 package com.example.faurplus;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageButton;
 
-import com.airbnb.lottie.LottieAnimationView;
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
+import androidx.appcompat.widget.Toolbar;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -20,26 +21,47 @@ public class MainActivity extends AppCompatActivity {
     ImageButton thirdScreen;
     //LottieAnimationView splash;
 
+
     @Override
-    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.app_bar_menu, menu);
+        return true;
+    }
 
-        switch (item.getItemId()){
-            case R.id.menuSettings:
-                startActivity(new Intent(MainActivity.this, Settings.class));
-                break;
-            case R.id.grafics:
-                startActivity(new Intent(MainActivity.this, Grafics.class));
-                break;
+    @Override
+    public boolean onOptionsItemSelected (MenuItem item) {
+
+
+        int id = item.getItemId();
+
+        if( id == R.id.menuSettings){
+
+            Intent intentS = new Intent(this, Settings.class);
+            startActivity(intentS);
+            return true;
+
+        }else if(id == R.id.grafics){
+
+            Intent intentG = new Intent(this, Grafics.class);
+            startActivity(intentG);
+            return true;
+
         }
-
 
         return super.onOptionsItemSelected(item);
     }
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+
+
+        Toolbar bottomAppBar = findViewById(R.id.bottomAppBar);
+        setSupportActionBar(bottomAppBar);
 
         //splash = findViewById(R.id.lottie);
         ImageButton firstScreen = (ImageButton) findViewById(R.id.imageViewFirstScreen);
