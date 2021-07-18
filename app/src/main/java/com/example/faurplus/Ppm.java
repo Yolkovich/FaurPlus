@@ -149,6 +149,10 @@ public class Ppm extends AppCompatActivity {
         difective = findViewById(R.id.difective);
         button = findViewById(R.id.button);
         time = findViewById(R.id.quantity_hours);
+        coordinatorLayout =  findViewById(R.id.materialToolbar);
+
+
+
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -166,76 +170,74 @@ public class Ppm extends AppCompatActivity {
                         forwardRight.getText().toString().equals("Puste pole") ||
                         backLeft.getText().toString().equals("Puste pole") ||
                         backRight.getText().toString().equals("Puste pole") ||
-                        difective.getText().toString().equals("Puste pole")){
+                        difective.getText().toString().equals("Puste pole") ||
+                        time.getText().toString().equals("Puste pole")){
                     count++;
                 } else {
 
                     if (stop) {
 
-                    }
                         if (forwardLeft.getText().toString().equals("Puste pole")) {
                             forwardLeft.setText(0 + "");
                         }
 
-                    if (forwardRight.getText().toString().equals("Puste pole")) {
-                        forwardRight.setText(0 + "");
+                        if (forwardRight.getText().toString().equals("Puste pole")) {
+                            forwardRight.setText(0 + "");
+                        }
+
+                        if (backLeft.getText().toString().equals("Puste pole")) {
+                            backLeft.setText(0 + "");
+                        }
+
+                        if (backRight.getText().toString().equals("Puste pole")) {
+                            backRight.setText(0 + "");
+                        }
+
+                        if (difective.getText().toString().equals("Puste pole")) {
+                            difective.setText(0 + "");
+                        }
+
+                        if (time.getText().toString().equals("Puste pole")) {
+                            time.setText(0 + "");
+                        }
                     }
 
-                    if (backLeft.getText().toString().equals("Puste pole")) {
-                        backLeft.setText(0 + "");
-                    }
+                    stop = true;
 
-                    if (backRight.getText().toString().equals("Puste pole")) {
-                        backRight.setText(0 + "");
-                    }
-
-                    if (difective.getText().toString().equals("Puste pole")) {
-                        difective.setText(0 + "");
-                    }
-
-                    if (time.getText().toString().equals("Puste pole")) {
-                        time.setText(0 + "");
-                    }
-
-                    }
-
-                stop = true;
-
-                if (stop) {
+                    if (stop) {
 
 
-            double forwardLeftD = Double.parseDouble(forwardLeft.getText().toString());
-            double forwardRightD = Double.parseDouble(forwardRight.getText().toString());
-            double backLeftD = Double.parseDouble(backLeft.getText().toString());
-            double backRightD = Double.parseDouble(backRight.getText().toString());
-            double difectiveD = Double.parseDouble(difective.getText().toString());
-            double timeD = Double.parseDouble(time.getText().toString());
+                        double forwardLeftD = Double.parseDouble(forwardLeft.getText().toString());
+                        double forwardRightD = Double.parseDouble(forwardRight.getText().toString());
+                        double backLeftD = Double.parseDouble(backLeft.getText().toString());
+                        double backRightD = Double.parseDouble(backRight.getText().toString());
+                        double difectiveD = Double.parseDouble(difective.getText().toString());
+                        double timeD = Double.parseDouble(time.getText().toString());
 
-            double allDetails = forwardLeftD + forwardRightD + backLeftD + backRightD + difectiveD;
-            double allGood = forwardLeftD + forwardRightD + backLeftD + backRightD;
+                        double allDetails = forwardLeftD + forwardRightD + backLeftD + backRightD + difectiveD;
+                        double allGood = forwardLeftD + forwardRightD + backLeftD + backRightD;
 
-            double ppm = (difectiveD * million) / allDetails;
+                        double ppm = (difectiveD * million) / allDetails;
 
-            double dle = (allGood * number1) / timeD / 3600 / 4 * 100;
+                        double dle = (allGood * number1) / timeD / 3600 / 4 * 100;
 
-                    if (Integer.parseInt(forwardLeft.getText().toString()) >= 0   &&
-                            Integer.parseInt(forwardRight.getText().toString()) >= 0 &&
-                            Integer.parseInt(backLeft.getText().toString()) >= 0 &&
-                            Integer.parseInt(backRight.getText().toString()) >= 0 &&
-                            Integer.parseInt(difective.getText().toString()) >= 0 &&
-                            Integer.parseInt(time.getText().toString()) >= 0 ){
+                        if (Integer.parseInt(forwardLeft.getText().toString()) >= 0 &&
+                                Integer.parseInt(forwardRight.getText().toString()) >= 0 &&
+                                Integer.parseInt(backLeft.getText().toString()) >= 0 &&
+                                Integer.parseInt(backRight.getText().toString()) >= 0 &&
+                                Integer.parseInt(difective.getText().toString()) >= 0 &&
+                                Integer.parseInt(time.getText().toString()) >= 0) {
 
-                    }
-                        Intent intent = new Intent(Ppm.this, PpmResult.class);
-                        intent.putExtra("ppm", ppm);
-                        intent.putExtra("dle", dle);
+                            Intent intent = new Intent(Ppm.this, PpmResult.class);
+                            intent.putExtra("ppm", ppm);
+                            intent.putExtra("dle", dle);
 
-                        startActivity(intent);
-
+                            startActivity(intent);
+                        }
                     }
 
 
-
+                }
 
             }
         });

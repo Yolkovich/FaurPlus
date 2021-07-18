@@ -134,6 +134,7 @@ public class Anna extends AppCompatActivity  {
                     count++;
                 }else{
                     if(stop){
+
                         if(v426_ok.getText().toString().equals("Puste pole")){
                             v426_ok.setText(0 + "");
                         }
