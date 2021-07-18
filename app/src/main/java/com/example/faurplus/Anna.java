@@ -79,35 +79,6 @@ public class Anna extends AppCompatActivity  {
 
 
     @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.app_bar_menu, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected (MenuItem item) {
-
-
-        int id = item.getItemId();
-
-        if( id == R.id.menuSettings){
-
-            Intent intentS = new Intent(this, Settings.class);
-            startActivity(intentS);
-            return true;
-
-        }else if(id == R.id.grafics){
-
-            Intent intentG = new Intent(this, Grafics.class);
-            startActivity(intentG);
-            return true;
-
-        }
-
-        return super.onOptionsItemSelected(item);
-    }
-
-    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_anna);

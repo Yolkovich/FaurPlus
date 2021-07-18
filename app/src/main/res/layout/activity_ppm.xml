@@ -338,25 +338,24 @@
         android:layout_gravity="right|bottom"
         android:layout_marginBottom="20dp"
         android:layout_marginRight="20dp"
-
         app:maxImageSize="40dp"
         />
 
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/test_numbers"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@color/ColorAccent"
-        android:src="@drawable/ic_trash"
-        app:backgroundTint="@color/Mistake"
-        app:fabCustomSize="70dp"
-        android:layout_gravity="right|bottom"
-        android:layout_marginBottom="150dp"
-        android:layout_marginRight="20dp"
+<!--    <com.google.android.material.floatingactionbutton.FloatingActionButton-->
+<!--        android:id="@+id/test_numbers"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:background="@color/ColorAccent"-->
+<!--        android:src="@drawable/ic_trash"-->
+<!--        app:backgroundTint="@color/Mistake"-->
+<!--        app:fabCustomSize="70dp"-->
+<!--        android:layout_gravity="right|bottom"-->
+<!--        android:layout_marginBottom="150dp"-->
+<!--        android:layout_marginRight="20dp"-->
 
-        app:maxImageSize="40dp"
-        />
+<!--        app:maxImageSize="40dp"-->
+<!--        />-->
 
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

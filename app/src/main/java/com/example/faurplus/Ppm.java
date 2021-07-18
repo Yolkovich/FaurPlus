@@ -52,32 +52,32 @@ public class Ppm extends AppCompatActivity {
 
             }
         });
-
-/////////////////////TEST///////////////////////////////////////////////////
-        FloatingActionButton test = (FloatingActionButton)findViewById(R.id.test_numbers);
-        test.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-
-
-
-                forwardLeft.setText("299");
-
-                forwardRight.setText("300");
-
-                backLeft.setText("288");
-
-                backRight.setText("288");
-
-                difective.setText("1");
-
-                time.setText("32");
-
-
-
-            }
-        });
+//
+///////////////////////TEST///////////////////////////////////////////////////
+//        FloatingActionButton test = (FloatingActionButton)findViewById(R.id.test_numbers);
+//        test.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//
+//
+//
+//
+//                forwardLeft.setText("299");
+//
+//                forwardRight.setText("300");
+//
+//                backLeft.setText("288");
+//
+//                backRight.setText("288");
+//
+//                difective.setText("1");
+//
+//                time.setText("32");
+//
+//
+//
+//            }
+//        });
 
 
 

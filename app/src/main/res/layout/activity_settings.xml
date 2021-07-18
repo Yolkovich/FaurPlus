@@ -6,12 +6,34 @@
     android:layout_height="match_parent"
     tools:context=".Settings">
 
-    <com.google.android.material.textview.MaterialTextView
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="настройки"
-        android:gravity="center"
-        android:textSize="50sp"/>
+        android:layout_height="680dp">
+
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/lottie"
+            android:layout_marginTop="20sp"
+            android:layout_width="match_parent"
+            android:layout_marginRight="28sp"
+            android:layout_height="500dp"
+            android:orientation="horizontal"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/build" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Będę wkrótce"
+            android:textSize="40dp"
+            android:gravity="center|bottom"/>
+
+
+
+
+
+    </RelativeLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
