@@ -9,17 +9,12 @@ import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import android.text.TextWatcher;
-
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
-
-import org.w3c.dom.Text;
 
 import java.util.Arrays;
 
@@ -389,7 +384,7 @@ public class MaxDle extends AppCompatActivity {
                             Integer.parseInt(ne.getText().toString()) >= 0 &&
                             Integer.parseInt(pe.getText().toString()) >= 0) {
 
-                        Intent intent = new Intent(MaxDle.this, DleResult.class);
+                        Intent intent = new Intent(MaxDle.this, DleResultActivity.class);
                         intent.putExtra("b_ex", b_ex);
                         intent.putExtra("d_ex", d_ex);
                         intent.putExtra("g_ex", g_ex);

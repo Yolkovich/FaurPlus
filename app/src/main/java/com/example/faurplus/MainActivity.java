@@ -9,9 +9,7 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageButton;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.app.AppCompatDelegate;
 import androidx.appcompat.widget.Toolbar;
 
 public class MainActivity extends AppCompatActivity {
@@ -42,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
 
         }else if(id == R.id.grafics){
 
-            Intent intentG = new Intent(this, Grafics.class);
+            Intent intentG = new Intent(this, GraphicsActivity.class);
             startActivity(intentG);
             return true;
 
@@ -77,7 +75,7 @@ public class MainActivity extends AppCompatActivity {
         firstScreen.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, Ppm.class);
+                Intent intent = new Intent(MainActivity.this, PpmActivity.class);
                 startActivity(intent);
 
                 // Animation onClick
@@ -89,7 +87,7 @@ public class MainActivity extends AppCompatActivity {
         secondScreen.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, Anna.class);
+                Intent intent = new Intent(MainActivity.this, PpmDleCalculatorActivity.class);
                 startActivity(intent);
 
                 // Animation onClick
